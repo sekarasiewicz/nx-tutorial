@@ -1,4 +1,10 @@
+npx create-nx-workspace nxegghead empty
 
+yarn nx list
+yarn nx list @nrwl/react
+yarn nx g  @nrwl/react:application
+yarn nx g  @nrwl/react:application --help
+yarn nx g  @nrwl/react:application --dry-run
 
 # Nxegghead
 
