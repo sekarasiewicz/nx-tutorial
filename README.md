@@ -6,6 +6,9 @@ yarn nx g  @nrwl/react:application
 yarn nx g  @nrwl/react:application --help
 yarn nx g  @nrwl/react:application --dry-run
 
+yarn nx run store:serve
+yarn nx run store:serve --port=3001
+
 # Nxegghead
 
 This project was generated using [Nx](https://nx.dev).
