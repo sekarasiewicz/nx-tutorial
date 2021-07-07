@@ -7,6 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 import { getAllGames } from '../fake-api'
+import { Header } from "@nxegghead/store/ui-shared";
+
 const StyledApp = styled.div`
   .games-layout {
     display: flex;
@@ -48,6 +50,7 @@ const StyledApp = styled.div`
 export const App = () => {
   return (
     <StyledApp>
+    <Header />
     <div className="container">
       <div className="games-layout">
         {getAllGames().map((x) => (
