@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nxegghead/store/formatters": ["libs/store/formatters/src/index.ts"],
       "@nxegghead/store/ui-shared": ["libs/store/ui-shared/src/index.ts"]
     }
   },

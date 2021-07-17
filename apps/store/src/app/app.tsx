@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { getAllGames } from '../fake-api'
 import { Header } from "@nxegghead/store/ui-shared";
+import { formatRating } from "@nxegghead/store/formatters";
 
 const StyledApp = styled.div`
   .games-layout {
@@ -74,7 +75,7 @@ export const App = () => {
                   component="p"
                   className="game-rating"
                 >
-                  <strong>Rating:</strong> {x.rating}
+                  <strong>Rating:</strong> {formatRating(x.rating)}
                 </Typography>
               </CardContent>
             </CardActionArea>

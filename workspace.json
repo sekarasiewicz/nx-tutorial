@@ -101,6 +101,27 @@
         }
       }
     },
+    "store-formatters": {
+      "root": "libs/store/formatters",
+      "sourceRoot": "libs/store/formatters/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/store/formatters/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/store/formatters"],
+          "options": {
+            "jestConfig": "libs/store/formatters/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "store-ui-shared": {
       "root": "libs/store/ui-shared",
       "sourceRoot": "libs/store/ui-shared/src",
