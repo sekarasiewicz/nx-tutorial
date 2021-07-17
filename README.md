@@ -14,6 +14,10 @@ yarn nx g  @nrwl/react:component header --project=store-ui-shared
 
 yarn nx g @nrwl/workspace:lib formatters --directory=store --dry-run
 
+yarn nx dep-graph
+
+yarn nx g @nrwl/react:lib feature-game-detail --directory=store --appProject=store
+
 # Nxegghead
 
 This project was generated using [Nx](https://nx.dev).
