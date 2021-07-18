@@ -18,6 +18,15 @@ yarn nx dep-graph
 
 yarn nx g @nrwl/react:lib feature-game-detail --directory=store --appProject=store
 
+express
+=============
+https://nx.dev/latest/react/express/overview
+yarn add -D @nrwl/express
+
+yarn nx generate @nrwl/express:application <express-app>
+yarn nx g @nrwl/express:application api --frontendProject=store
+yarn nx run api:serve
+
 # Nxegghead
 
 This project was generated using [Nx](https://nx.dev).
