@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { getAllGames, getGame } from "./app/game.repository";
+import { getAllGames, getGame } from './app/game.repository';
 
 const app = express();
 
