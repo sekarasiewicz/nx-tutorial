@@ -7,12 +7,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
-import { getAllGames } from '../fake-api';
 import { Header } from '@nxegghead/store/ui-shared';
 import { formatRating } from '@nxegghead/store/formatters';
 import { StoreFeatureGameDetail } from '@nxegghead/store/feature-game-detail';
-
-
+import { useEffect, useState } from 'react';
 
 const StyledApp = styled.div`
   .games-layout {
@@ -52,14 +50,46 @@ const StyledApp = styled.div`
     height: 140px;
   }
 `;
+
 export const App = () => {
   const history = useHistory()
+
+  const [state, setState] = useState<{
+    data: any[],
+    loadingState: 'success' | 'error' | 'loading'
+  }>({ data: [], loadingState: 'success' })
+
+  useEffect(() => {
+    setState({
+      ...state,
+      loadingState: 'loading'
+    })
+
+    fetch('api/games')
+      .then(x => x.json())
+      .then(res => {
+        setState({
+          ...state,
+          data: res,
+          loadingState: 'success'
+        })
+      })
+      .catch(err => {
+        setState({
+          ...state,
+          loadingState: 'error'
+        })
+      })
+  }, [])
+
   return (
     <StyledApp>
       <Header />
       <div className="container">
         <div className="games-layout">
-          {getAllGames().map((x) => (
+          {state.loadingState === 'loading' && 'loading'}
+          {state.loadingState === 'error' && <div>'Error retrieving Data'</div> }
+          {state.loadingState === 'success' && state.data.map(x => (
             <Card key={x.id} className="game-card" onClick={() => history.push(`/game/${x.id}`)}>
               <CardActionArea>
                 <CardMedia
