@@ -1,4 +1,6 @@
-const games = [
+import { IGame } from '@nxegghead/api/util-interfaces'
+
+const games: IGame[] = [
   {
     id: 'settlers-in-the-can',
     name: 'Settlers in the Can',
@@ -24,7 +26,7 @@ const games = [
     price: 45,
     rating: Math.random(),
   },
-];
+]
 
-export const getAllGames = () => games;
-export const getGame = (id: string) => games.find((game) => game.id === id);
+export const getAllGames = () => games
+export const getGame = (id: string) => games.find((game) => game.id === id)

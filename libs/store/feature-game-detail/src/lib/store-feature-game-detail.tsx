@@ -1,7 +1,8 @@
 import { RouteComponentProps } from 'react-router-dom'
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
-import { useEffect, useState } from 'react';
-import { formatRating } from '@nxegghead/store/formatters';
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core'
+import { useEffect, useState } from 'react'
+import { formatRating } from '@nxegghead/store/formatters'
+import { IGame } from '@nxegghead/api/util-interfaces'
 
 type TParam = {
   id: string
@@ -12,10 +13,10 @@ export type StoreFeatureGameDetailProps = RouteComponentProps<TParam>
 export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
   const { match: { params: { id } } } = props
   const [state, setState] = useState<{
-    data: any,
+    data: IGame | null,
     loadingState: 'success' | 'error' | 'loading'
   }>({
-    data: {},
+    data: null,
     loadingState: 'success'
   })
   useEffect(() => {
@@ -52,12 +53,12 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
           <CardActionArea>
             <CardMedia
               className="game-card-media"
-              image={state.data.image}
-              title={state.data.name}
+              image={state.data?.image}
+              title={state.data?.name}
             />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
-                {state.data.name}
+                {state.data?.name}
               </Typography>
               <Typography
                 variant="body2"
@@ -65,14 +66,14 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
                 component="p"
                 className="game-rating"
               >
-                <strong>Rating:</strong> {formatRating(state.data.rating)}
+                <strong>Rating:</strong> {formatRating(state.data?.rating || 0)}
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       }
     </div>
-  );
+  )
 }
 
-export default StoreFeatureGameDetail;
+export default StoreFeatureGameDetail

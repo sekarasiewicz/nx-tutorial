@@ -18,6 +18,8 @@ yarn nx dep-graph
 
 yarn nx g @nrwl/react:lib feature-game-detail --directory=store --appProject=store
 
+yarn nx generate @nrwl/workspace:lib util-interfaces --directory=api
+
 express
 =============
 https://nx.dev/latest/react/express/overview

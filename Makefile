@@ -3,3 +3,6 @@ start:
 
 start2:
 	yarn nx run store:serveAppAndApi
+
+dep:
+	yarn nx dep-graph

@@ -11,6 +11,7 @@ import { Header } from '@nxegghead/store/ui-shared';
 import { formatRating } from '@nxegghead/store/formatters';
 import { StoreFeatureGameDetail } from '@nxegghead/store/feature-game-detail';
 import { useEffect, useState } from 'react';
+import { IGame } from '@nxegghead/api/util-interfaces';
 
 const StyledApp = styled.div`
   .games-layout {
@@ -55,7 +56,7 @@ export const App = () => {
   const history = useHistory()
 
   const [state, setState] = useState<{
-    data: any[],
+    data: IGame[],
     loadingState: 'success' | 'error' | 'loading'
   }>({ data: [], loadingState: 'success' })
 

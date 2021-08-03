@@ -30,6 +30,9 @@
     "api": {
       "tags": []
     },
+    "api-util-interfaces": {
+      "tags": []
+    },
     "store": {
       "tags": []
     },
