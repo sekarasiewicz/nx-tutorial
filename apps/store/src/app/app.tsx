@@ -85,7 +85,7 @@ export const App = () => {
 
   return (
     <StyledApp>
-      <Header />
+      <Header title="Board Game Hoard" />
       <div className="container">
         <div className="games-layout">
           {state.loadingState === 'loading' && 'loading'}
