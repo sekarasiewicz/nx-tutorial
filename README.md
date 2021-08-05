@@ -25,6 +25,9 @@ yarn nx run store-ui-shared:storybook
 yarn nx run store-ui-shared-e2e:e2e --watch
 yarn nx run store-ui-shared-e2e:e2e --headless
 
+yarn nx run store:test
+yarn nx run store:test --watch
+
 express
 =============
 https://nx.dev/latest/react/express/overview
