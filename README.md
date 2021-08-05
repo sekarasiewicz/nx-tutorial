@@ -28,6 +28,9 @@ yarn nx run store-ui-shared-e2e:e2e --headless
 yarn nx run store:test
 yarn nx run store:test --watch
 
+yarn nx run store:build --configuration=production
+yarn nx build api --configuration=production
+
 express
 =============
 https://nx.dev/latest/react/express/overview
