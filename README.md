@@ -20,6 +20,11 @@ yarn nx g @nrwl/react:lib feature-game-detail --directory=store --appProject=sto
 
 yarn nx generate @nrwl/workspace:lib util-interfaces --directory=api
 
+yarn nx run store-ui-shared:storybook
+
+yarn nx run store-ui-shared-e2e:e2e --watch
+yarn nx run store-ui-shared-e2e:e2e --headless
+
 express
 =============
 https://nx.dev/latest/react/express/overview
