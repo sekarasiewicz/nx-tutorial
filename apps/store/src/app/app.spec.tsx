@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './app';
 
-function mockFetch(data: any) {
+function mockFetch(data: {id: number}[]) {
   return jest.fn().mockImplementation(() => {
     return Promise.resolve({
       ok: true,

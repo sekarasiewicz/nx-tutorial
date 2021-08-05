@@ -61,25 +61,25 @@ export const App = () => {
   }>({ data: [], loadingState: 'success' })
 
   useEffect(() => {
-    setState({
+    setState((state) => ({
       ...state,
       loadingState: 'loading'
-    })
+    }))
 
     fetch('api/games')
       .then(x => x.json())
       .then(res => {
-        setState({
+        setState((state) => ({
           ...state,
           data: res,
           loadingState: 'success'
-        })
+        }))
       })
       .catch(err => {
-        setState({
+        setState((state) => ({
           ...state,
           loadingState: 'error'
-        })
+        }))
       })
   }, [])
 
