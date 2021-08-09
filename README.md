@@ -31,6 +31,13 @@ yarn nx run store:test --watch
 yarn nx run store:build --configuration=production
 yarn nx build api --configuration=production
 
+yarn nx affected:dep-graph --base=<branch-name>
+
+yarn nx affected:test --all --skip-nx-cache
+
+yarn nx migrate latest
+nx migrate --run-migrations
+
 express
 =============
 https://nx.dev/latest/react/express/overview
