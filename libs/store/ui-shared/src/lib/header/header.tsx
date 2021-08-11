@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 /* eslint-disable-next-line */
 export interface HeaderProps {
   title: string
+  subTitle: string
 }
 
 export const Header = (props: HeaderProps) => {
@@ -28,8 +29,11 @@ export const Header = (props: HeaderProps) => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
+        <Typography variant="h5" className={classes.title}>
           {props.title}
+        </Typography>
+        <Typography variant="h6" className={classes.title}>
+          {props.subTitle}
         </Typography>
       </Toolbar>
     </AppBar>

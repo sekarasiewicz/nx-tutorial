@@ -1,0 +1,48 @@
+
+> nx run store-ui-shared:build-storybook --outputDir=/var/folders/g6/5c5_cl2j05z28517nfw4hv_c0000gn/T/chromatic--79102-GZEZSnuNk9p2 
+
+>  NX  ui framework: @storybook/react
+
+
+>  NX  Storybook builder starting ...
+
+info => Cleaning outputDir: /Users/sebastiankarasiewicz/Projects/nxegghead/dist/storybook/store-ui-shared
+info => Loading presets
+info => Compiling manager..
+info => Compiling preview..
+info => Loading 1 config file in "/Users/sebastiankarasiewicz/Projects/nxegghead/libs/store/ui-shared/.storybook"
+info => Loading 8 other files in "/Users/sebastiankarasiewicz/Projects/nxegghead/libs/store/ui-shared/.storybook"
+info => Adding stories defined in "/Users/sebastiankarasiewicz/Projects/nxegghead/libs/store/ui-shared/.storybook/main.js"
+info => Using implicit CSS loaders
+info => Loading custom Webpack config (full-control mode).
+(node:79121) DeprecationWarning: Default PostCSS plugins are deprecated. When switching to '@storybook/addon-postcss',
+you will need to add your own plugins, such as 'postcss-flexbugs-fixes' and 'autoprefixer'.
+
+See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-default-postcss-plugins for details.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+info => Manager built (19 s)
+info => Preview built (28 s)
+WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+WARN This can impact web performance.
+WARN Assets: 
+WARN   vendors~main.02c99013.iframe.bundle.js (2.83 MiB)
+WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+WARN Entrypoints:
+WARN   main (2.85 MiB)
+WARN       runtime~main.6d10c81c.iframe.bundle.js
+WARN       vendors~main.02c99013.iframe.bundle.js
+WARN       main.42339559.iframe.bundle.js
+WARN 
+info => Output directory: /Users/sebastiankarasiewicz/Projects/nxegghead/dist/storybook/store-ui-shared
+
+>  NX  Storybook builder finished ...
+
+
+>  NX  Storybook files available in dist/storybook/store-ui-shared
+
+
+———————————————————————————————————————————————
+
+>  NX   SUCCESS  Running target "build-storybook" succeeded
+
+

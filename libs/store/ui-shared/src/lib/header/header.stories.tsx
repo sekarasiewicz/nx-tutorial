@@ -11,4 +11,5 @@ const Template: Story<HeaderProps> = (args) => <Header {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   title: '',
+  subTitle: '',
 };

@@ -23,7 +23,9 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "build-storybook": "nx run store-ui-shared:build-storybook",
+    "chromatic": "npx chromatic --project-token=b37e0a29805e"
   },
   "private": true,
   "dependencies": {
@@ -74,6 +76,7 @@
     "babel-jest": "26.2.2",
     "babel-loader": "8.1.0",
     "babel-plugin-styled-components": "1.10.7",
+    "chromatic": "^5.9.2",
     "cypress": "^7.3.0",
     "dotenv": "8.2.0",
     "eslint": "7.22.0",
